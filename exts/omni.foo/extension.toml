@@ -1,0 +1,36 @@
+[package]
+# Semantic Versionning is used: https://semver.org/
+version = "0.3.11"
+
+# Lists people or organizations that are considered the "authors" of the package.
+authors = ["Anton Novoselov <anovoselov@nvidia.com>"]
+
+# The title and description fields are primarily for displaying extension info in UI
+title = "Python Extension Example"
+description="The simplest python extension example. Use it as a starting point for your extensions."
+
+# URL of the extension source repository.
+repository="https://gitlab-master.nvidia.com/omniverse/kit"
+
+# One of categories for UI.
+category = "Example"
+
+# Keywords for the extension
+keywords = ["kit", "example"]
+
+
+# No dependencies for this simple extension:
+[dependencies]
+"omni.kit.loop" = {}
+"omni.kit.test" = {}
+
+
+[[python.module]]
+name = "foofoo"
+
+# Extension test settings
+[test]
+args = []
+dependencies = []
+stdoutFailPatterns.include = []
+stdoutFailPatterns.exclude = []
